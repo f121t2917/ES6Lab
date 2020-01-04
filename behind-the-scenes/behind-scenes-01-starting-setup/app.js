@@ -1,3 +1,9 @@
+'use strict' // 開啟嚴格模式 必需放在最上面
+
+userName = 'Max'; // Uncaught ReferenceError: userName is not defined
+
+console.log(userName);
+
 // 比較 var let
 
 // 重複宣告
@@ -17,3 +23,4 @@ function greet() {
 console.log(varName);
 console.log(letName);
 greet();
+
