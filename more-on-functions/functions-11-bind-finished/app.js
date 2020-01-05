@@ -146,3 +146,5 @@ combine(
   15,
   20
 );
+
+// 除了 bind 還有 .call() .apply()
