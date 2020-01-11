@@ -91,6 +91,7 @@ const startDeleteMovieHander = movieId => {
 
     // confirmDeletionButton.removeEventListener('click', deleteMovieHandler); // 無法解決 按多次取消時的監聽
     // 使用取代方式
+    // cloneNode 不會 clone EventListener
     confirmDeletionButton.replaceWith(confirmDeletionButton,cloneNode(true));
     confirmDeletionButton = deleteMovieModal.querySelector('.btn--danger');
 
