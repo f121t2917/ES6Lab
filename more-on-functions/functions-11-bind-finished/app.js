@@ -147,4 +147,4 @@ combine(
   20
 );
 
-// 除了 bind 還有 .call() .apply()
+// 除了 bind 還有 .call() .apply()，參考 objects 07

@@ -49,3 +49,29 @@ const nameData = ['Max', 'Schwarz', 'Mr', 30];
 // const lastName = nameData[1];
 const [ firstName, lastName, ...otherInformation ] = nameData;
 console.log(firstName, lastName);
+
+
+// spread object 中的陣列
+const person11 = { name: 'Max', age: 30, hobbies:['Sports', 'Cooking'] }
+
+// 複製一個全新的陣列，不是 Reference Value
+person12 = { ...person11 };
+person11.age = 31 // person11 
+console.log(person12.age); // person12.age => 30 因為 age 是數值 所以 spread 是複製一個值過去
+
+// spread 不會深度複製
+person11.hobbies.push('Coding') 
+console.log(person12); // person12.hobbies => 多了Coding 因為 hobbies 是陣列 是 複製一個參考過去
+
+// 複製且覆蓋值
+const person13 = {...person11, age: 29, hobbies: [...person.hobbies]};
+
+person11.hobbies.pop();
+console.log(person11);
+console.log(person13);
+
+// 另一個複製值的方式 assign，跟 spread 一樣不會深度複製
+// Object.assign(target, ...sources) 合併目標物件及(多個)來源物件所得到的最終物件
+// 有相同屬性時合併物件
+const person21 = {name: 'Max'};
+const person22 = Object.assign({}, person21);
